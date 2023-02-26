@@ -13,10 +13,9 @@ type dbRepository struct {
 }
 
 func (r *dbRepository) GetById(string) (*access_token.AccessToken, *errors.RestErr) {
-	return nil, nil
+	return nil, errors.NewInternalServerError("database connection not implemented")
 }
 
 func NewRepository() DbRepository {
 	return &dbRepository{}
-
 }
